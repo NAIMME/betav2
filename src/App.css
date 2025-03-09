@@ -1,0 +1,118 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+  }
+  
+  .main-container {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-paper {
+    padding: 24px;
+    flex-grow: 1;
+    margin-bottom: 24px;
+  }
+  
+  .section {
+    width: 100%;
+  }
+  
+  .ar-section {
+    padding: 0;
+    height: 70vh;
+  }
+  
+  /* Results Display */
+  .results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 0;
+  }
+  
+  .result-image {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  /* Processing Container */
+  .processing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+  }
+  
+  /* Claude Assistant Container */
+  .claude-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .claude-container.minimized {
+    transform: translateY(calc(100% - 60px));
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .main-container {
+      padding: 16px;
+    }
+    
+    .content-paper {
+      padding: 16px;
+    }
+    
+    .claude-container {
+      bottom: 16px;
+      right: 16px;
+      width: calc(100% - 32px);
+    }
+    
+    .results-container {
+      margin: 8px 0;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+    
+    .action-buttons button {
+      margin-top: 8px !important;
+      margin-right: 0 !important;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .section {
+    animation: fadeIn 0.3s ease-in-out;
+  }

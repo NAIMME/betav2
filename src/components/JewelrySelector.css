@@ -1,0 +1,105 @@
+.jewelry-selector-container {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  /* Type tabs */
+  .jewelry-type-tabs {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Filter controls */
+  .jewelry-filter-controls {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  
+  /* Jewelry grid */
+  .jewelry-grid {
+    margin-top: 16px;
+  }
+  
+  /* Jewelry item card */
+  .jewelry-item-card {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .jewelry-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .jewelry-item-card.selected {
+    border: 2px solid #3f51b5;
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.3);
+  }
+  
+  /* Jewelry item tags */
+  .jewelry-item-tags {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  
+  /* Metal type chips */
+  .metal-gold {
+    background-color: #FFD700 !important;
+    color: #000 !important;
+  }
+  
+  .metal-silver {
+    background-color: #C0C0C0 !important;
+    color: #000 !important;
+  }
+  
+  .metal-platinum {
+    background-color: #E5E4E2 !important;
+    color: #000 !important;
+  }
+  
+  .metal-rosegold {
+    background-color: #B76E79 !important;
+    color: #fff !important;
+  }
+  
+  /* Gemstone chips */
+  .gem-chip {
+    background-color: #9C27B0 !important;
+    color: #fff !important;
+  }
+  
+  /* Loading and error states */
+  .jewelry-loading, 
+  .jewelry-error,
+  .no-results {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .jewelry-filter-controls {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .jewelry-item-card {
+      max-height: 220px;
+    }
+  }

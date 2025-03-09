@@ -1,0 +1,9 @@
+{
+    "short_name": "Virtual Try-On",
+    "name": "Virtual Try-On Platform",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }

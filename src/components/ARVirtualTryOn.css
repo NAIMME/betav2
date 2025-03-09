@@ -1,0 +1,164 @@
+.ar-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .ar-content {
+    padding: 0 !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* AR View */
+  .ar-view-container {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    background-color: #000;
+    min-height: 400px;
+  }
+  
+  .ar-video,
+  .ar-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Tracking Guide Overlay */
+  .tracking-guide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: pulse 2s infinite;
+  }
+  
+  .tracking-guide svg {
+    margin-top: 8px;
+    font-size: 32px;
+    opacity: 0.8;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+  
+  /* Performance Stats */
+  .performance-stats {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .performance-stats .MuiChip-root {
+    margin-bottom: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  /* Controls */
+  .ar-controls {
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+  }
+  
+  .zoom-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Settings Panel */
+  .settings-panel {
+    margin-top: 16px;
+    width: 100%;
+  }
+  
+  .settings-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  
+  .settings-control {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Loading Screen */
+  .ar-loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-align: center;
+    min-height: 400px;
+  }
+  
+  /* Error Screen */
+  .ar-error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-align: center;
+    min-height: 400px;
+    background-color: #ffebee;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .settings-controls {
+      grid-template-columns: 1fr;
+    }
+    
+    .ar-controls .MuiStack-root {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  /* Fullscreen Styles */
+  :fullscreen .ar-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  :fullscreen .ar-view-container {
+    min-height: calc(100vh - 80px);
+  }
